@@ -7,10 +7,17 @@ g++ -o bin/testHashTable testHashTable.cpp
 
 # Regla para generar el binario de prueba bin/testTableEntry
 bin/testTableEntry: testTableEntry.cpp TableEntry.h
+	
 mkdir -p bin
 g++ -o bin/testTableEntry testTableEntry.cpp
+
+# Regla para generar el binario de prueba bin/testBSTree
+bin/testBSTree: testBSTree.cpp BSTree.h BSNode.h
+mkdir -p bin
+g++ -o bin/testBSTree testBSTree.cpp
 
 # Limpiar
 clean:
 rm -rf *.o *.gch bin
+
 
